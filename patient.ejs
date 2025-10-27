@@ -1,0 +1,14 @@
+<h2>Patients List</h2>
+<form action="/patients/add" method="POST">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="number" name="age" placeholder="Age" required />
+    <input type="text" name="disease" placeholder="Disease" required />
+    <input type="text" name="phone" placeholder="Phone" required />
+    <button type="submit">Add Patient</button>
+</form>
+
+<ul>
+  <% patients.forEach(p => { %>
+     <li><%= p.name %> | <%= p.disease %> | <%= p.phone %></li>
+  <% }) %>
+</ul>
